@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:skip-module="http://www.mulesoft.org/schema/mule/skip-module"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/skip-module http://www.mulesoft.org/schema/mule/skip-module/current/mule-skip-module.xsd">
+
+    <skip-module:config name="config" configId="configId">
+        <skip-module:connection requiredParameter="aValue" />
+    </skip-module:config>
+
+    <flow name="sayHiFlow">
+        <skip-module:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <skip-module:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>
