@@ -1,6 +1,6 @@
-# Skip-module Extension
+# Skip Module
 
-Scope used to skip execution of a particular group of message processors
+Scope used to skip execution of a particular group of message processors. It's meant to enhance the development experience of lengthy/complex applications.
 
 
 Add this dependency to your application pom.xml
